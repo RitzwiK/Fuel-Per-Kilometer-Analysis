@@ -74,7 +74,8 @@ notebooks/FuelAnalysis.ipynb
 
 ## 📷 Screenshots
 <p align="center"> <img src="screenshots/correlation_plot.png" alt="Correlation Plot" width="500"/> <br> <img src="screenshots/regression_result.png" alt="Regression Line" width="500"/> </p>
-## 📌 Features
+
+## 📌 Features <br>
 🔍 Exploratory Data Analysis (EDA)
 
 📈 Linear regression to predict fuel efficiency
@@ -86,10 +87,10 @@ notebooks/FuelAnalysis.ipynb
 📂 Clean modular structure for data + code separation
 
 ## 🧠 Future Enhancements
-Use real-time API-based fuel data
+•Use real-time API-based fuel data
 
-Build a web dashboard with Streamlit
+•Build a web dashboard with Streamlit
 
-Add multiple ML models for better prediction
+•Add multiple ML models for better prediction
 
-Vehicle clustering using KMeans
+•Vehicle clustering using KMeans
