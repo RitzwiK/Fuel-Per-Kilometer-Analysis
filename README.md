@@ -38,7 +38,7 @@ Fuel-Per-Kilometer-Analysis/
 ### 🚀 How to Run the Project
 
 #### 1. Clone the Repository
-
+```bash
 
 git clone https://github.com/RitzwiK/Fuel-Per-Kilometer-Analysis.git
 cd Fuel-Per-Kilometer-Analysis
