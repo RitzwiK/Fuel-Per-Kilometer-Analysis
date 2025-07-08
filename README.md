@@ -72,7 +72,8 @@ Then open:
 notebooks/FuelAnalysis.ipynb
 ```
 
-## 📷 Screenshots
+## 📷 Screenshots <br>
+(To be Updated)
 <p align="center"> <img src="screenshots/correlation_plot.png" alt="Correlation Plot" width="500"/> <br> <img src="screenshots/regression_result.png" alt="Regression Line" width="500"/> </p>
 
 ## 📌 Features <br>
