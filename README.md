@@ -35,54 +35,34 @@ Fuel-Per-Kilometer-Analysis/
 │   └── regression_result.png
 ├── README.md
 
-## 🚀 How to Run the Project
-1. Clone the Repository
+### 🚀 How to Run the Project
 
-bash
-Copy
-Edit
+#### 1. Clone the Repository
+
+
 git clone https://github.com/RitzwiK/Fuel-Per-Kilometer-Analysis.git
 cd Fuel-Per-Kilometer-Analysis
 2. (Optional) Create and Activate a Virtual Environment
+Windows:
 
-Windows
-
-bash
-Copy
-Edit
 python -m venv venv
 venv\Scripts\activate
-macOS/Linux
+macOS/Linux:
 
-bash
-Copy
-Edit
 python3 -m venv venv
 source venv/bin/activate
 3. Install Required Libraries
+If you have a requirements.txt:
 
-If requirements.txt exists:
-
-bash
-Copy
-Edit
 pip install -r requirements.txt
 Or install manually:
 
-bash
-Copy
-Edit
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 4. Launch the Jupyter Notebook
 
-bash
-Copy
-Edit
 jupyter notebook
-Then open the notebook:
+Then open:
 
-Copy
-Edit
 notebooks/FuelAnalysis.ipynb
 
 
