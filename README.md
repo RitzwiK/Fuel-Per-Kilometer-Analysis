@@ -73,8 +73,9 @@ notebooks/FuelAnalysis.ipynb
 ```
 
 ## 📷 Screenshots <br>
-(To be Updated)
-<p align="center"> <img src="screenshots/correlation_plot.png" alt="Correlation Plot" width="500"/> <br> <img src="screenshots/regression_result.png" alt="Regression Line" width="500"/> </p>
+<table> <tr> <td><img src="screenshots/graph1.png" width="400"/></td> <td><img src="screenshots/graph2.png" width="400"/></td> </tr> </table>
+<table> <tr> <td><img src="screenshots/graph3.png" width="350"/></td> <td><img src="screenshots/graph4.png" width="350"/></td> </tr> <tr> <td><img src="screenshots/graph5.png" width="350"/></td> <td><img src="screenshots/graph6.png" width="350"/></td> </tr> </table>
+<img src="screenshots/graph7.png" width="700"/> <img src="screenshots/graph8.png" width="700"/> <img src="screenshots/graph9.png" width="700"/>
 
 ## 📌 Features <br>
 🔍 Exploratory Data Analysis (EDA)
