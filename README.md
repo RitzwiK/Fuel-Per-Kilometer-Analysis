@@ -97,6 +97,6 @@ Fuel-Per-Kilometer-Analysis/
 
 •Vehicle clustering using KMeans
 <p align="center">
-<img src="screenshots/kanye.gif" width="70%"/>
+<img src="screenshots/kanye.gif" width="50%"/>
 </p>
 <h1 align="center"><strong>Analysis Completed!</strong></h1>
