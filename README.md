@@ -99,4 +99,4 @@ Fuel-Per-Kilometer-Analysis/
 <p align="center">
 <img src="screenshots/kanye.gif" width="70%"/>
 </p>
-<h1 align="center"><strong>Analysis Completed</strong></h1>
+<h1 align="center"><strong>Analysis Completed!</strong></h1>
