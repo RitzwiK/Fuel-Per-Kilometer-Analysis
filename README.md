@@ -23,17 +23,10 @@ This project:
 
 ---
 
-## 📁 Folder Structure
-
-Fuel-Per-Kilometer-Analysis/
-├── data/
-│   └── car_fuel_data.csv        # Dataset used
-├── notebooks/
-│   └── FuelAnalysis.ipynb       # Jupyter notebook with EDA + ML
-├── screenshots/
-│   └── correlation_plot.png
-│   └── regression_result.png
-├── README.md
+## 📷 Screenshots <br>
+<table> <tr> <td><img src="screenshots/graph1.png" width="400"/></td> <td><img src="screenshots/graph2.png" width="400"/></td> </tr> </table>
+<table> <tr> <td><img src="screenshots/graph3.png" width="350"/></td> <td><img src="screenshots/graph4.png" width="350"/></td> </tr> <tr> <td><img src="screenshots/graph5.png" width="350"/></td> <td><img src="screenshots/graph6.png" width="350"/></td> </tr> </table>
+<img src="screenshots/graph7.png" width="700"/> <img src="screenshots/graph8.png" width="700"/> <img src="screenshots/graph9.png" width="700"/>
 
 ### 🚀 How to Run the Project
 
@@ -72,10 +65,17 @@ Then open:
 notebooks/FuelAnalysis.ipynb
 ```
 
-## 📷 Screenshots <br>
-<table> <tr> <td><img src="screenshots/graph1.png" width="400"/></td> <td><img src="screenshots/graph2.png" width="400"/></td> </tr> </table>
-<table> <tr> <td><img src="screenshots/graph3.png" width="350"/></td> <td><img src="screenshots/graph4.png" width="350"/></td> </tr> <tr> <td><img src="screenshots/graph5.png" width="350"/></td> <td><img src="screenshots/graph6.png" width="350"/></td> </tr> </table>
-<img src="screenshots/graph7.png" width="700"/> <img src="screenshots/graph8.png" width="700"/> <img src="screenshots/graph9.png" width="700"/>
+## 📁 Folder Structure
+
+Fuel-Per-Kilometer-Analysis/
+├── data/
+│   └── car_fuel_data.csv        # Dataset used
+├── notebooks/
+│   └── FuelAnalysis.ipynb       # Jupyter notebook with EDA + ML
+├── screenshots/
+│   └── correlation_plot.png
+│   └── regression_result.png
+├── README.md
 
 ## 📌 Features <br>
 🔍 Exploratory Data Analysis (EDA)
