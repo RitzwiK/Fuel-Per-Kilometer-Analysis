@@ -96,6 +96,7 @@ Fuel-Per-Kilometer-Analysis/
 •Add multiple ML models for better prediction
 
 •Vehicle clustering using KMeans
-
-<img src="screenshots/kanye.gif" width="700"/>
-<h2 align="center"><strong>Analysis Completed</strong></h2>
+<p align="center">
+<img src="screenshots/kanye.gif" width="70%"/>
+</p>
+<h1 align="center"><strong>Analysis Completed</strong></h1>
