@@ -1,7 +1,3 @@
-# app_fixed_header_clean.py
-# Enhanced FuelSense Analysis - HEADER CLEANUP (no header images or lottie, reduced spacing, larger title)
-# Only layout / design changes for header; no functional changes.
-
 import time
 import re
 import os
@@ -16,21 +12,11 @@ import feedparser
 import plotly.express as px
 from io import BytesIO
 
-# ----------------------------------
-# Load model + scaler (UNCHANGED)
-# ----------------------------------
 loaded_model = pk.load(open("trained_model_lr.sav", "rb"))
 scaled_data  = pk.load(open("scaled_data.sav", "rb"))
 
-# ----------------------------------
-# Page config
-# ----------------------------------
 st.set_page_config(page_title="FuelSense Analysis", page_icon="⛽", layout="wide")
 
-# ----------------------------------
-# Dark automotive images - URLs for better blending with dark theme
-# (kept in file for backward compatibility; not used in header now)
-# ----------------------------------
 DARK_DASHBOARD_IMAGES = [
     "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=400&fit=crop&q=80",
     "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=400&fit=crop&q=80",
@@ -41,9 +27,6 @@ DARK_DASHBOARD_IMAGES = [
 
 BACKGROUND_TEXTURE_URL = "https://images.unsplash.com/photo-1617886903355-9354bb57751f?w=1920&h=1080&fit=crop&q=80"
 
-# ----------------------------------
-# Utility functions (kept unchanged)
-# ----------------------------------
 @st.cache_data
 def fetch_image_as_base64_with_mime(url, timeout=8):
     try:
@@ -92,9 +75,6 @@ def load_lottie(url):
     except:
         return None
 
-# ----------------------------------
-# Loading animation (unchanged)
-# ----------------------------------
 def show_enhanced_loading_animation():
     loading_placeholder = st.empty()
     with loading_placeholder.container():
@@ -121,19 +101,9 @@ def show_enhanced_loading_animation():
 
 show_enhanced_loading_animation()
 
-# ----------------------------------
-# Background texture - optional (not used for header images)
-# ----------------------------------
 bg_texture_result = fetch_image_as_base64_with_mime(BACKGROUND_TEXTURE_URL)
 bg_texture_b64 = bg_texture_result[0] if bg_texture_result else None
 
-# ----------------------------------
-# CSS adjustments:
-# - reduce top spacing
-# - remove header images styling and lottie styling
-# - provide a compact textured black strip instead of images/animation
-# - make main title bigger
-# ----------------------------------
 if bg_texture_b64:
     bg_css = f"""
     background-image: url('data:image/jpeg;base64,{bg_texture_b64}'), linear-gradient(180deg, rgba(0,0,0,0.88) 0%, rgba(8,8,10,0.92) 100%) !important;
@@ -146,7 +116,6 @@ if bg_texture_b64:
 else:
     bg_css = "background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #050505 100%), radial-gradient(circle at 20% 30%, rgba(255,255,255,0.015), transparent 25%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.01), transparent 20%) !important;"
 
-# ---------- Replace the existing header CSS block with this (keeps f-string bg_css usage) ----------
 st.markdown(f"""
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -308,14 +277,10 @@ st.markdown(f"""
 </style>
 """, unsafe_allow_html=True)
 
-
-# ---------- Replace the header-rendering lines with these ----------
 st.markdown("<div class='header-compact' style='text-align:center;'>", unsafe_allow_html=True)
 
-# textured strip instead of gif/person image or left/right images
 st.markdown("<div class='header-texture' aria-hidden='true'></div>", unsafe_allow_html=True)
 
-# Large title (increased font size). No images anywhere in header.
 st.markdown("""
     <h1 class='fuel-main-title' style='text-align: center;'>
         FuelSense Analysis
@@ -325,10 +290,6 @@ st.markdown("""
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-
-# ----------------------------------
-# VEHICLE CONFIGURATION & NEWS (unchanged functionality; kept styling)
-# ----------------------------------
 with st.expander("🔧 VEHICLE CONFIGURATION & LATEST NEWS", expanded=False):
     st.markdown("""
         <div style='text-align: center; margin-bottom: 28px;'>
@@ -496,7 +457,7 @@ with st.expander("🔧 VEHICLE CONFIGURATION & LATEST NEWS", expanded=False):
         """, unsafe_allow_html=True)
 
 # ----------------------------------
-# FUEL INSIGHTS & ANALYTICS DASHBOARD (unchanged)
+# FUEL INSIGHTS & ANALYTICS DASHBOARD 
 # ----------------------------------
 with st.expander("📊 FUEL INSIGHTS & ANALYTICS DASHBOARD", expanded=False):
     st.markdown("""
@@ -593,10 +554,6 @@ with st.expander("📊 FUEL INSIGHTS & ANALYTICS DASHBOARD", expanded=False):
         </div>
         """, unsafe_allow_html=True)
 
-# ---------------------------
-# Built-by / Contact block
-# Place this block immediately BEFORE the FOOTER section in your file
-# ---------------------------
 
 import streamlit.components.v1 as components  # safe to add here
 
@@ -693,10 +650,9 @@ contact_html = """
 </div>
 """
 
-# Render HTML via Streamlit components (more reliable for inline SVG)
 components.html(contact_html, height=160, scrolling=False)
 # ----------------------------------
-# FOOTER (unchanged)
+# FOOTER 
 # ----------------------------------
 st.markdown("""
 <div style='text-align: center; padding: 40px 0 20px 0; margin-top: 40px; 
