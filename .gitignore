@@ -1,0 +1,8 @@
+# Ignore auto-generated folders
+.ipynb_checkpoints/
+Not needed/
+
+# Optional ignores
+__pycache__/
+*.pyc
+*.sav
