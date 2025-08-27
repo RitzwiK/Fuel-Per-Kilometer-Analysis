@@ -17,6 +17,17 @@ scaled_data  = pk.load(open("scaled_data.sav", "rb"))
 
 st.set_page_config(page_title="FuelSense Analysis", page_icon="⛽", layout="wide")
 
+st.markdown("""
+<style>
+button [data-baseweb="button"] + div, 
+button + div[role="tooltip"], 
+[data-testid="stTooltipHoverTarget"],
+div[role='tooltip'] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 DARK_DASHBOARD_IMAGES = [
     "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=400&fit=crop&q=80",
     "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=400&fit=crop&q=80",
