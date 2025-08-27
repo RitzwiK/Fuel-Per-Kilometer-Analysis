@@ -95,13 +95,17 @@ The project is now live! You can try the interactive web app here:
 
 **[fuelsense.streamlit.app](https://fuelsense.streamlit.app)**
 
-<p align="center">
 <!-- Add deployment screenshots below -->
-<img src="screenshots/deploy1.png" width="700"/>
-<img src="screenshots/deploy2.png" width="700"/>
-<img src="screenshots/deploy3.png" width="700"/>
-<img src="screenshots/deploy4.png" width="700"/>
-</p>
+<table>
+  <tr>
+    <td><img src="screenshots/deploy1.png" width="350"/></td>
+    <td><img src="screenshots/deploy2.png" width="350"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/deploy3.png" width="350"/></td>
+    <td><img src="screenshots/deploy4.png" width="350"/></td>
+  </tr>
+</table>
 
 ## 🧠 Future Enhancements
 •Use real-time API-based fuel data
