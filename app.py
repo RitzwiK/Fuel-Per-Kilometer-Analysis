@@ -353,7 +353,8 @@ with st.expander("🔧 VEHICLE CONFIGURATION & LATEST NEWS", expanded=False):
 
     st.markdown("<div style='display: flex; justify-content: center; margin: 32px 0;'>", unsafe_allow_html=True)
 
-    if st.button("✨ Calculate Fuel Consumption", key="calculate", help="Get AI-powered fuel consumption prediction"):
+    if st.button("✨ Calculate Fuel Consumption", help="Get AI-powered fuel consumption prediction"):
+
         with st.spinner("🧠 AI is analyzing your vehicle configuration..."):
             time.sleep(1.5)
 
