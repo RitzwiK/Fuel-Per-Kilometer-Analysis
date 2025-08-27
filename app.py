@@ -274,6 +274,18 @@ st.markdown(f"""
     .fuel-main-title {{ font-size: 2.4rem !important; }}
     .header-texture {{ height: 44px; }}
   }}
+ .stButton button {{
+  display: block !important;
+  margin: 10px auto !important;
+  width: 100%;
+  max-width: 600px;
+}}
+
+.stTextInput {{
+  margin: 10px auto !important;
+  display: block !important;
+}}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -620,33 +632,38 @@ contact_html = """
   <p class="built-by">Built by <span class="name">RITWIK</span></p>
   <p class="one-liner">Less fuel, more miles.</p>
 
-  <div class="contact-icons" role="list">
-    <!-- LinkedIn -->
-    <a role="listitem" title="Open LinkedIn" href="https://www.linkedin.com/in/ritwik-k-68537a285/" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#c5c5c5" stroke-width="1.2" fill="none"/>
-        <path d="M7 10.5V18" stroke="#c5c5c5" stroke-width="1.2" stroke-linecap="round"/>
-        <circle cx="7" cy="7.5" r="1.1" fill="#c5c5c5"/>
-        <path d="M11.5 18V13.5c0-1.1.9-2 2-2s2 .9 2 2V18" stroke="#c5c5c5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+<div class="contact-icons" role="list" style="display:flex; gap:15px; justify-content:center; margin-top:20px;">
+  
+  <!-- LinkedIn -->
+  <a role="listitem" title="Open LinkedIn" href="https://www.linkedin.com/in/ritwik-k-68537a285/" 
+     target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="28" height="28">
+      <rect x="2" y="3" width="20" height="18" rx="2" stroke="#c5c5c5" stroke-width="1.2" fill="none"/>
+      <path d="M7 10.5V18" stroke="#c5c5c5" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="7" cy="7.5" r="1.1" fill="#c5c5c5"/>
+      <path d="M11.5 18V13.5c0-1.1.9-2 2-2s2 .9 2 2V18" 
+            stroke="#c5c5c5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 
-    <!-- GitHub -->
-    <a role="listitem" title="Open GitHub" href="https://github.com/RitzwiK" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 .6C5.9.6.9 5.6.9 11.7c0 4.9 3.2 9 7.6 10.5.6.1.8-.3.8-.6v-2.1c-3.1.7-3.7-1.4-3.7-1.4-.5-1.2-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.7-.8 2.1-1.3-.8-.1-1.7-.4-1.7-1.9 0-.4.1-.8.3-1.1-.3-.1-1.1-.5-.1-1 0 0 .8-.2 2.2.9.6-.2 1.2-.3 1.9-.3s1.3.1 1.9.3c1.4-1.1 2.2-.9 2.2-.9.9.5.2.9.1 1-0.2.3-.3.7-.3 1.1 0 1.5-.9 1.8-1.7 1.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.4-1.5 7.6-5.7 7.6-10.5C23.1 5.6 18.1.6 12 .6z"
-              stroke="#c5c5c5" stroke-width="0.3" fill="#c5c5c5"/>
-      </svg>
-    </a>
+  <!-- GitHub -->
+  <a role="listitem" title="Open GitHub" href="https://github.com/RitzwiK" 
+     target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="28" height="28">
+      <path d="M12 .6C5.9.6.9 5.6.9 11.7c0 4.9 3.2 9 7.6 10.5.6.1.8-.3.8-.6v-2.1c-3.1.7-3.7-1.4-3.7-1.4-.5-1.2-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.7-.8 2.1-1.3-.8-.1-1.7-.4-1.7-1.9 0-.4.1-.8.3-1.1-.3-.1-1.1-.5-.1-1 0 0 .8-.2 2.2.9.6-.2 1.2-.3 1.9-.3s1.3.1 1.9.3c1.4-1.1 2.2-.9 2.2-.9.9.5.2.9.1 1-0.2.3-.3.7-.3 1.1 0 1.5-.9 1.8-1.7 1.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.4-1.5 7.6-5.7 7.6-10.5C23.1 5.6 18.1.6 12 .6z"
+            stroke="#c5c5c5" stroke-width="0.3" fill="#c5c5c5"/>
+    </svg>
+  </a>
 
-    <!-- Email -->
-    <a role="listitem" title="Send Email" href="kritwik495@gmail.com" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2.5" y="4" width="19" height="16" rx="2" stroke="#c5c5c5" stroke-width="1.2" fill="none"/>
-        <path d="M3.5 7.5l7.5 5 7.5-5" stroke="#c5c5c5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </div>
+  <!-- Email -->
+  <a role="listitem" title="Send Email" href="mailto:kritwik495@gmail.com" 
+     target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="28" height="28">
+      <rect x="2.5" y="4" width="19" height="16" rx="2" stroke="#c5c5c5" stroke-width="1.2" fill="none"/>
+      <path d="M3.5 7.5l7.5 5 7.5-5" stroke="#c5c5c5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+ </div>
 </div>
 """
 
