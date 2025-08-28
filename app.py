@@ -195,6 +195,43 @@ st.markdown(f"""
     -webkit-text-fill-color: transparent !important;
   }}
 
+  /* --- Fixed Streamlit form elements --- */
+  
+  /* Fix selectbox styling and ensure dropdown items are visible */
+  .stSelectbox > div > div > div {{
+    background-color: rgba(40, 40, 40, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+  }}
+  
+  .stSelectbox > div > div > div > div {{
+    color: #ffffff !important;
+  }}
+  
+  /* Fix dropdown menu visibility */
+  .stSelectbox [data-baseweb="select"] > div {{
+    background-color: rgba(40, 40, 40, 0.98) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+  }}
+  
+  /* Fix dropdown options */
+  .stSelectbox [role="option"] {{
+    background-color: rgba(40, 40, 40, 0.95) !important;
+    color: #ffffff !important;
+  }}
+  
+  .stSelectbox [role="option"]:hover {{
+    background-color: rgba(60, 60, 60, 0.95) !important;
+    color: #ffffff !important;
+  }}
+  
+  /* Fix selected option */
+  .stSelectbox [data-baseweb="select"] span {{
+    color: #ffffff !important;
+  }}
+
   /* --- Make Streamlit sliders match the FuelSense title tone --- */
   :root {{
     --fuel-title-color: #e0e0e0;
@@ -266,6 +303,32 @@ st.markdown(f"""
     line-height: 1.4;
   }}
 
+  /* Fix button styling to prevent text overlap */
+  .stButton > button {{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: all 0.2s ease !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+  }}
+  
+  .stButton > button:hover {{
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1)) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+  }}
+
   /* Preserve all original interactive element styling below */
   .glass-card {{
     background: linear-gradient(180deg, rgba(15,15,15,0.85), rgba(8,8,8,0.9)) !important;
@@ -285,18 +348,173 @@ st.markdown(f"""
     .fuel-main-title {{ font-size: 2.4rem !important; }}
     .header-texture {{ height: 44px; }}
   }}
- .stButton button {{
-  display: block !important;
-  margin: 10px auto !important;
-  width: 100%;
-  max-width: 600px;
+
+  /* Fix text input styling */
+  .stTextInput > div > div > input {{
+    background-color: rgba(40, 40, 40, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+  }}
+
+  /* Fix labels */
+  .stSelectbox label, .stSlider label, .stTextInput label {{
+    color: #ffffff !important;
+    font-weight: 500 !important;
+  }}
+ 
+  /* Additional dropdown visibility fixes */
+  .stSelectbox [data-baseweb="select"] [data-baseweb="popover"] {{
+    background-color: rgba(40, 40, 40, 0.98) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }}
+
+  .stSelectbox [data-baseweb="select"] ul {{
+    background-color: rgba(40, 40, 40, 0.98) !important;
+  }}
+
+  .stSelectbox [data-baseweb="select"] li {{
+    background-color: rgba(40, 40, 40, 0.95) !important;
+    color: #ffffff !important;
+  }}
+
+  .stSelectbox [data-baseweb="select"] li:hover {{
+    background-color: rgba(60, 60, 60, 0.95) !important;
+    color: #ffffff !important;
+  }}
+
+  /* Fix for dropdown text visibility */
+  .stSelectbox [data-baseweb="select"] [role="listbox"] [role="option"] span {{
+    color: #ffffff !important;
+  }}
+
+  .stSelectbox [data-baseweb="select"] [role="option"] > div {{
+    color: #ffffff !important;
+  }}
+  .stSelectbox [role="listbox"] [role="option"] {{
+    color: #ffffff !important;         /* ensures text + emojis visible */
+    background-color: rgba(30,30,30,0.95) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 6px 10px !important;
 }}
 
-.stTextInput {{
-  margin: 10px auto !important;
-  display: block !important;
+.stSelectbox [role="listbox"] [role="option"]:hover {{
+    background-color: rgba(60,60,60,0.95) !important;
+    color: #ffffff !important;
+}}
+  /* Ensure all text in dropdown is visible */
+.stSelectbox * {{
+    color: #ffffff !important;
+  }}
+
+  /* Global popover coverage (covers when BaseWeb attaches popovers to body) */
+  body [data-baseweb="popover"] *,
+  body [data-baseweb="popover"] [role="option"],
+  body [data-baseweb="popover"] ul[role="listbox"] {{
+    color: #ffffff !important;
+    background-color: rgba(30,30,30,0.98) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Inter, "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999 !important;
+  }}
+
+  /* listbox container */
+  .stSelectbox [data-baseweb="select"] ul[role="listbox"],
+  .stSelectbox [data-baseweb="select"] [role="listbox"] {{
+    background-color: rgba(30,30,30,0.98) !important;
+    color: #ffffff !important;
+    padding: 6px 0 !important;
+    border-radius: 8px !important;
+  }}
+
+  /* individual options */
+  .stSelectbox [data-baseweb="select"] [role="option"],
+  .stSelectbox [data-baseweb="select"] li[role="option"] {{
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 8px 12px !important;
+    color: #ffffff !important;
+    background-color: rgba(30,30,30,0.95) !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }}
+
+  .stSelectbox [data-baseweb="select"] [role="option"]:hover,
+  .stSelectbox [data-baseweb="select"] li[role="option"]:hover,
+  body [data-baseweb="popover"] [role="option"]:hover {{
+    background-color: rgba(60,60,60,0.95) !important;
+    color: #ffffff !important;
+  }}
+
+  /* ensure the selected value inside the control is visible (closed select) */
+  .stSelectbox [data-baseweb="select"] [data-baseweb="control"] *,
+  .stSelectbox [data-baseweb="select"] [data-baseweb="control"] {{
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Inter, "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+  }}
+  
+  div[data-baseweb="popover"] [role="option"] {{
+    color: #ffffff !important;               /* text color visible */
+    -webkit-text-fill-color: #ffffff !important;  /* Safari/Chrome fix */
+    font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif !important;
+    background-color: transparent !important;
+  }}
+
+  div[data-baseweb="popover"] [role="option"]:hover {{
+      background-color: rgba(70, 70, 70, 0.95) !important;
+      color: #ffffff !important;
+    }}
+  /* --- Nuclear fix for invisible dropdown options --- */
+  div[data-baseweb="popover"] [role="option"] {{
+      color: #ffffff !important;                     /* force white text */
+      -webkit-text-fill-color: #ffffff !important;   /* Chrome/Safari override */
+      background-color: #111 !important;             /* dark background for contrast */
+      opacity: 1 !important;                         /* ensure visible */
+      visibility: visible !important;                /* ensure visible */
+  }}
+
+  div[data-baseweb="popover"] [role="option"] * {{
+      color: #ffffff !important;                     /* child spans also visible */
+      -webkit-text-fill-color: #ffffff !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+  }}
+
+  div[data-baseweb="popover"] [role="option"]:hover {{
+      background-color: #333 !important;             /* highlight on hover */
+      color: #ffffff !important;
+  }}
+div[data-baseweb="popover"] [role="option"] {{
+    border: 1px solid red !important;
+}}
+div[data-baseweb="popover"] [role="option"] span {{
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}}
+div[data-baseweb="popover"] [role="option"] span {{
+    border: 1px solid lime !important;
 }}
 
+div[data-baseweb="popover"] [role="option"],
+div[data-baseweb="popover"] [role="option"] *,
+div[data-baseweb="popover"] [role="option"]::before,
+div[data-baseweb="popover"] [role="option"]::after {{
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}}
+div[data-baseweb="popover"] [role="option"] {{
+    content: "TEST" !important;
+}}
 </style>
 """, unsafe_allow_html=True)
 
