@@ -19,11 +19,24 @@ st.set_page_config(page_title="FuelSense Analysis", page_icon="⛽", layout="wid
 
 st.markdown("""
 <style>
+/* Hide tooltips */
 button [data-baseweb="button"] + div, 
 button + div[role="tooltip"], 
 [data-testid="stTooltipHoverTarget"],
 div[role='tooltip'] {
     display: none !important;
+}
+
+/* Fix for expander keyboard shortcuts overlapping */
+.st-emotion-cache-1itdyc2, 
+[data-testid="stExpander"] summary span:last-child,
+.streamlit-expanderHeader span:last-child {
+    display: none !important;
+}
+
+/* Ensure expander text is visible */
+[data-testid="stExpander"] summary {
+    overflow: visible !important;
 }
 </style>
 """, unsafe_allow_html=True)
