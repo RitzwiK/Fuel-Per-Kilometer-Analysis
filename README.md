@@ -116,6 +116,6 @@ The project is now live! You can try the interactive web app here:
 
 •Vehicle clustering using KMeans
 <p align="center">
-<img src="screenshots/kanye.gif" width="50%"/>
+
 </p>
-<h1 align="center"><strong>Analysis Completed!</strong></h1>
+<h1 align="center"><strong>Analysis Done.</strong></h1>
